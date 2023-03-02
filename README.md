@@ -56,4 +56,4 @@ This section defines a bridge network called my-network that both services use t
 ### Conclusion
 This is a simple Flask-PyMongo application that connects to a MongoDB database using Docker Compose. The application can be easily deployed on any machine that has Docker installed.
 
-https://www.buymeacoffee.com/pydev2007
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/pydev2007)
