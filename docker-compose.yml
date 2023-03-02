@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    container_name: my-mongo-container
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./mongo-data:/data/db
+    networks:
+      - my-network
+
+  python:
+    build: .
+    container_name: my-python-container
+    restart: always
+    depends_on:
+      - mongo
+    ports:
+      - '8000:8000'
+    environment:
+      MONGO_URI: mongodb://my-mongo-container:27017/mydatabase
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
